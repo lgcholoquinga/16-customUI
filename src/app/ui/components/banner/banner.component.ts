@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { BaseComponent } from '../base.component';
 
 @Component({
   selector: 'lc-banner',
@@ -12,18 +13,4 @@ import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular
   styleUrl: './banner.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class BannerComponent {
-  @Input()
-  appearance: 'solid' | 'stroked' = 'solid';
-
-  @Input()
-  color: 'primary' | 'secondary' = 'primary';
-
-  @HostBinding('class')
-  protected get computedHostClasses() {
-    return {
-      [`df-${[this.appearance]}`]: true,
-      [`df-${[this.color]}`]: true,
-    };
-  }
-}
+export class BannerComponent extends BaseComponent {}

@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, HostBinding, HostListener, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { BaseComponent } from '../base.component';
 
 @Component({
   selector: 'button[dfButton], a[dfButton]',
@@ -12,36 +13,4 @@ import { ChangeDetectionStrategy, Component, HostBinding, HostListener, Input } 
   styleUrl: 'button.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ButtonComponent {
-  @Input()
-  appearance: 'solid' | 'stroked' = 'solid';
-
-  @Input()
-  color: 'primary' | 'secondary' = 'primary';
-
-  @HostBinding('class')
-  protected get computedHostClasses(){
-    return {
-      [`df-${[this.appearance]}`]: true,
-      [`df-${[this.color]}`]: true,
-    }
-  }
-
-  @Input()
-  @HostBinding('class.disabled')
-  disabled = false;
-
-  @HostBinding('attr.disabled')
-  protected get nativeDisabled(): '' | null {
-    return this.disabled ? '': null;
-  }
-
-  @HostListener('click', ['$event'])
-  @HostListener('dblclick', ['$event'])
-  onClick(e: Event){
-    if(this.disabled){
-      e.preventDefault();
-      e.stopImmediatePropagation();
-    }
-  }
-}
+export class ButtonComponent extends BaseComponent {}
