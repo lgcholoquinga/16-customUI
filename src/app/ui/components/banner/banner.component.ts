@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { UIAppearanceDirective, UIColorDirective } from '../../directives';
+import { UIAppearanceDirective, UIColorDirective } from '@ui/directives';
 
 @Component({
 	selector: 'lc-banner',

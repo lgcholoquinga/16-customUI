@@ -1,6 +1,6 @@
 import { NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
-import { UIAppearanceDirective, UIColorDirective, UIDisableDirective } from '../../directives';
+import { UIColorDirective, UIAppearanceDirective, UIDisableDirective } from '@ui/directives';
 
 @Component({
 	selector: 'lc-chip',

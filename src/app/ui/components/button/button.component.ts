@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { UIAppearanceDirective, UIColorDirective, UIDisableDirective } from '../../directives';
+import { UIColorDirective, UIAppearanceDirective, UIDisableDirective } from '@ui/directives';
 
 @Component({
 	selector: 'button[dfButton], a[dfButton]',

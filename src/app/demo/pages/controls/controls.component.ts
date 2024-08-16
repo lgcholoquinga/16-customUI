@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ButtonComponent, ChipComponent, BannerComponent } from '../../../ui/components';
+import { BannerComponent, ButtonComponent, ChipComponent } from '@ui/components';
 
 @Component({
 	selector: 'lc-controls',
