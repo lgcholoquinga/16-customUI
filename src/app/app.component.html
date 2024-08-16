@@ -16,24 +16,24 @@
 <main>
    <h3>Button</h3>
    <div class="d-flex" style="gap: 10px;">
-      <button dfButton>Solid Button</button>
-      <button dfButton appearance="stroked">Stroked Button</button>
+      <button canColor canAppearance canDisable dfButton>Solid Button</button>
+      <button canColor canAppearance canDisable appearance="stroked" dfButton>Stroked Button</button>
    </div>
 
    <h3>Chip</h3>
    <div class="d-flex" style="gap: 10px;">
-      <lc-chip appearance="solid" [removable]="true">Solid Chip</lc-chip>
-      <lc-chip appearance="stroked" [removable]="true">Stroked chip</lc-chip>
+      <lc-chip canColor canAppearance canDisable appearance="solid" [removable]="true">Solid Chip</lc-chip>
+      <lc-chip canColor canAppearance canDisable appearance="stroked" [removable]="true">Stroked chip</lc-chip>
    </div>
 
    <h3>Banner</h3>
-   <lc-banner appearance="solid">
+   <lc-banner canColor canAppearance appearance="solid">
       <p>
          This is a demo text for a banner which has SOLID appearance 
        </p>
    </lc-banner>
    <br>
-   <lc-banner appearance="stroked">
+   <lc-banner canColor canAppearance appearance="stroked">
       <p>
          This is a demo text for a banner which has STROKED appearance
        </p>

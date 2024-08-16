@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { BaseComponent } from '../base.component';
 
 @Component({
   selector: 'button[dfButton], a[dfButton]',
@@ -13,4 +12,4 @@ import { BaseComponent } from '../base.component';
   styleUrl: 'button.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ButtonComponent extends BaseComponent {}
+export class ButtonComponent {}

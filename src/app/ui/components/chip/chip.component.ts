@@ -1,6 +1,5 @@
 import { NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
-import { BaseComponent } from '../base.component';
 
 @Component({
   selector: 'lc-chip',
@@ -15,7 +14,7 @@ import { BaseComponent } from '../base.component';
   styleUrl: 'chip.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ChipComponent extends BaseComponent {
+export class ChipComponent {
   @Input()
   removable = false;
 

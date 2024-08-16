@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { BaseComponent } from '../base.component';
 
 @Component({
   selector: 'lc-banner',
@@ -13,4 +12,4 @@ import { BaseComponent } from '../base.component';
   styleUrl: './banner.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class BannerComponent extends BaseComponent {}
+export class BannerComponent {}
