@@ -1,4 +1,4 @@
-<main>
+<!-- <main>
    <h1>Structural Directives</h1>
    <section *hideAfter="8000 as time; then placeholder; let counter = counter; let default" class="banner primary">
       <h2>Temporary Content</h2>
@@ -11,4 +11,32 @@
          <p>Here was some content. It was visible for  {{hiddenAfter}} seconds. {{myDefault}}</p>
        </section>
    </ng-template>
+</main> -->
+
+<main>
+   <h3>Button</h3>
+   <div class="d-flex" style="gap: 10px;">
+      <button dfButton>Solid Button</button>
+      <button dfButton appearance="stroked">Stroked Button</button>
+   </div>
+
+   <h3>Chip</h3>
+   <div class="d-flex" style="gap: 10px;">
+      <lc-chip appearance="solid" [removable]="true">Solid Chip</lc-chip>
+      <lc-chip appearance="stroked" [removable]="true">Stroked chip</lc-chip>
+   </div>
+
+   <h3>Banner</h3>
+   <lc-banner appearance="solid">
+      <p>
+         This is a demo text for a banner which has SOLID appearance 
+       </p>
+   </lc-banner>
+   <br>
+   <lc-banner appearance="stroked">
+      <p>
+         This is a demo text for a banner which has STROKED appearance
+       </p>
+   </lc-banner>
+   
 </main>
