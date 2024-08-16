@@ -1,3 +1,3 @@
-export * from './can-appearance.directive';
-export * from './can-color.directive';
-export * from './can-disable.directive';
+export * from './ui-appearance.directive';
+export * from './ui-color.directive';
+export * from './ui-disable.directive';

@@ -1,44 +1,44 @@
 import { NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
-import { CanColorDirective, CanAppearanceDirective, CanDisableDirective } from '../../directives';
+import { UIAppearanceDirective, UIColorDirective, UIDisableDirective } from '../../directives';
 
 @Component({
-  selector: 'lc-chip',
-  standalone: true,
-  imports: [NgIf],
-  template: `
-    <span class="chip-text">
-      <ng-content></ng-content>
-    </span>
-    <i (click)="onRemove()" *ngIf="removable" class="chip-remove-icon"></i>
-  `,
-  styleUrl: 'chip.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  hostDirectives: [
-    {
-      directive: CanColorDirective,
-      inputs: ['color']
-    },
-    {
-      directive: CanAppearanceDirective,
-      inputs: ['appearance']
-    },
-    {
-      directive: CanDisableDirective,
-      inputs: ['disabled']
-    }
-  ]
+	selector: 'lc-chip',
+	standalone: true,
+	imports: [NgIf],
+	template: `
+		<span class="chip-text">
+			<ng-content></ng-content>
+		</span>
+		<!-- <i (click)="onRemove()" *ngIf="removable" class="chip-remove-icon"></i> -->
+	`,
+	styleUrl: 'chip.component.scss',
+	changeDetection: ChangeDetectionStrategy.OnPush,
+	hostDirectives: [
+		{
+			directive: UIColorDirective,
+			inputs: ['color'],
+		},
+		{
+			directive: UIAppearanceDirective,
+			inputs: ['appearance'],
+		},
+		{
+			directive: UIDisableDirective,
+			inputs: ['disabled'],
+		},
+	],
 })
 export class ChipComponent {
-  @Input()
-  removable = false;
+	@Input()
+	removable = false;
 
-  @Output()
-  removed = new EventEmitter<ChipComponent>();
+	@Output()
+	removed = new EventEmitter<ChipComponent>();
 
-  onRemove() {
-    if(this.removable){
-      this.removed.emit(this);
-    }
-  }
+	onRemove() {
+		if (this.removable) {
+			this.removed.emit(this);
+		}
+	}
 }
