@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'lc-demo',
   standalone: true,
   imports: [RouterOutlet],
-  template: `<router-outlet />`
+  templateUrl: './demo.component.html',
+  styleUrl: './demo.component.scss'
 })
-export class AppComponent {}
+export default class DemoComponent {}
