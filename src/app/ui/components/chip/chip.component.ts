@@ -10,7 +10,7 @@ import { UIColorDirective, UIAppearanceDirective, UIDisableDirective } from '@ui
 		<span class="chip-text">
 			<ng-content></ng-content>
 		</span>
-		<!-- <i (click)="onRemove()" *ngIf="removable" class="chip-remove-icon"></i> -->
+		<i (click)="onRemove()" *ngIf="removable" class="chip-remove-icon"></i>
 	`,
 	styleUrl: 'chip.component.scss',
 	changeDetection: ChangeDetectionStrategy.OnPush,
