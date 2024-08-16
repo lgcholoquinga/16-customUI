@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 
 import { HideAfterDirective } from './hide-after.directive';
 import { BannerComponent, ButtonComponent, ChipComponent } from './ui/components';
-import { CanAppearanceDirective, CanColorDirective, CanDisableDirective } from './ui/directives';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +10,7 @@ import { CanAppearanceDirective, CanColorDirective, CanDisableDirective } from '
     HideAfterDirective, 
     ButtonComponent, 
     ChipComponent, 
-    BannerComponent,
-    CanAppearanceDirective,
-    CanColorDirective,
-    CanDisableDirective
+    BannerComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

@@ -16,27 +16,42 @@
 <main>
    <h3>Button</h3>
    <div class="d-flex" style="gap: 10px;">
-      <button canColor canAppearance canDisable dfButton>Solid Button</button>
-      <button canColor canAppearance canDisable appearance="stroked" dfButton>Stroked Button</button>
+      <button dfButton [disabled]="true">Solid Button</button>
+      <button dfButton color="secondary">Solid Button</button>
+      <button dfButton appearance="stroked">Stroked Button</button>
+      <button dfButton appearance="stroked" color="secondary" [disabled]="true">Stroked Button</button>
    </div>
 
    <h3>Chip</h3>
    <div class="d-flex" style="gap: 10px;">
-      <lc-chip canColor canAppearance canDisable appearance="solid" [removable]="true">Solid Chip</lc-chip>
-      <lc-chip canColor canAppearance canDisable appearance="stroked" [removable]="true">Stroked chip</lc-chip>
+      <lc-chip appearance="solid" [removable]="true">Solid Chip</lc-chip>
+      <lc-chip appearance="solid" color="secondary" [removable]="true">Solid Chip</lc-chip>
+      <lc-chip appearance="stroked" [removable]="true">Stroked chip</lc-chip>
+      <lc-chip appearance="stroked" color="secondary" [removable]="true">Stroked chip</lc-chip>
    </div>
 
    <h3>Banner</h3>
-   <lc-banner canColor canAppearance appearance="solid">
+   <lc-banner appearance="solid">
       <p>
          This is a demo text for a banner which has SOLID appearance 
        </p>
    </lc-banner>
    <br>
-   <lc-banner canColor canAppearance appearance="stroked">
+   <lc-banner appearance="solid" color="secondary">
+      <p>
+         This is a demo text for a banner which has SOLID appearance 
+       </p>
+   </lc-banner>
+   <br>
+   <lc-banner appearance="stroked">
       <p>
          This is a demo text for a banner which has STROKED appearance
        </p>
    </lc-banner>
-   
+   <br>
+   <lc-banner appearance="stroked" color="secondary">
+      <p>
+         This is a demo text for a banner which has STROKED appearance
+       </p>
+   </lc-banner>
 </main>

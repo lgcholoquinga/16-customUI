@@ -1,5 +1,6 @@
 import { NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { CanColorDirective, CanAppearanceDirective, CanDisableDirective } from '../../directives';
 
 @Component({
   selector: 'lc-chip',
@@ -12,7 +13,21 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
     <i (click)="onRemove()" *ngIf="removable" class="chip-remove-icon"></i>
   `,
   styleUrl: 'chip.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  hostDirectives: [
+    {
+      directive: CanColorDirective,
+      inputs: ['color']
+    },
+    {
+      directive: CanAppearanceDirective,
+      inputs: ['appearance']
+    },
+    {
+      directive: CanDisableDirective,
+      inputs: ['disabled']
+    }
+  ]
 })
 export class ChipComponent {
   @Input()
